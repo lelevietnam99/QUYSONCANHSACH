@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy Sơn Cảnh Sách</title>
+    <!-- Tích hợp FontAwesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --bg-gradient: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            
+            /* Background vũ trụ gradient */
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Tạo hiệu ứng các vì sao (stars) trôi nhẹ nhàng */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            /* Phân bổ các điểm sáng ngẫu nhiên */
+            box-shadow: 17vw 15vh #FFF, 82vw 82vh #FFF, 42vw 52vh #FFF, 32vw 22vh #FFF, 95vw 45vh #FFF, 50vw 80vh #FFF, 20vw 90vh #FFF, 80vw 10vh #FFF, 10vw 60vh #FFF, 60vw 30vh #FFF, 70vw 70vh #FFF, 85vw 35vh #FFF, 30vw 75vh #FFF, 5vw 25vh #FFF, 45vw 90vh #FFF;
+            animation: animStar 100s linear infinite;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        
+        .stars::after {
+            content: " ";
+            position: absolute;
+            top: 100vh;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: 17vw 15vh #FFF, 82vw 82vh #FFF, 42vw 52vh #FFF, 32vw 22vh #FFF, 95vw 45vh #FFF, 50vw 80vh #FFF, 20vw 90vh #FFF, 80vw 10vh #FFF, 10vw 60vh #FFF, 60vw 30vh #FFF, 70vw 70vh #FFF, 85vw 35vh #FFF, 30vw 75vh #FFF, 5vw 25vh #FFF, 45vw 90vh #FFF;
+        }
+
+        @keyframes animStar {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-100vh); }
+        }
+
+        /* Khung chứa nội dung: Hiệu ứng kính (Glassmorphism) mờ ảo */
+        .container {
+            background-color: rgba(20, 20, 35, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            height: fit-content;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 15px;
+            text-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px;
+            text-decoration: none;
+            color: #d1d1d1;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover {
+            background: rgba(0, 210, 255, 0.15);
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3);
+            border-color: rgba(0, 210, 255, 0.5);
+        }
+
+        .link-item i {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            filter: drop-shadow(0 0 5px rgba(0, 210, 255, 0.5));
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1>Quy Sơn Cảnh Sách</h1>
+        <div class="links-grid">
+            <a href="index1.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 1</a>
+            <a href="index2.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 2</a>
+            <a href="index3.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 3</a>
+            <a href="index4.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 4</a>
+            <a href="index5.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 5</a>
+            <a href="index6.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 6</a>
+            <a href="index7.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 7</a>
+            <a href="index8.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 8</a>
+            <a href="index9.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 9</a>
+            <a href="index10.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 10</a>
+            <a href="index11.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 11</a>
+            <a href="index12.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 12</a>
+            <a href="index13.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 13</a>
+            <a href="index14.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 14</a>
+            <a href="index15.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 15</a>
+            <a href="index16.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 16</a>
+            <a href="index17.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 17</a>
+            <a href="index18.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 18</a>
+            <a href="index19.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 19</a>
+            <a href="index20.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 20</a>
+            <a href="index21.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 21</a>
+            <a href="index22.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 22</a>
+            <a href="index23.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 23</a>
+            <a href="index24.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 24</a>
+            <a href="index25.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 25</a>
+            <a href="index26.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 26</a>
+            <a href="index27.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 27</a>
+            <a href="index28.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 28</a>
+            <a href="index29.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 29</a>
+            <a href="index30.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 30</a>
+            <a href="index31.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 31</a>
+            <a href="index32.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 32</a>
+            <a href="index33.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 33</a>
+            <a href="index34.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 34</a>
+            <a href="index35.html" class="link-item"><i class="fa-solid fa-earth-asia"></i> Phần 35</a>
+        </div>
+    </div>
+</body>
+</html>
